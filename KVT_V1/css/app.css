@@ -76,7 +76,7 @@ body {
 }
 
 .project-row {
-  height: 850px;
+  height: 770px;
   /* margin-bottom: 50px;; */
   /* border-bottom: 1px solid #75af65; */
 }
@@ -161,8 +161,8 @@ body {
   background-color: steelblue;
 }
 
-/* LARGER SCREENS 1190 */
-@media screen and (min-width: 1200px) {
+/* LARGER SCREENS 1190/1200 */
+@media screen and (min-width: 1025px) {
   .project-row {
     height: 325px;
   }
