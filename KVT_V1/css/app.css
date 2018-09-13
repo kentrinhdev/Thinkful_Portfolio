@@ -11,11 +11,12 @@ html, body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  /* background-color: #1A2225; */
 }
 
 body {
-  background: url(/img/bg.png);
-  background-position: center;
+  background: url(/img/bg.jpg);
+  background-position: left bottom;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -40,7 +41,7 @@ body {
 .intro-text {
   font-family: 'Orbitron', sans-serif;
   font-size: 5rem;
-  /* color: #75af65; //Cursor color */
+  /* color: #75af65; //blinking cursor color */
   text-align: right;
   margin-top: 50px;
 }
@@ -141,9 +142,9 @@ body {
 
 /* FOOTER SECTION */
 .footer-section {
-  height: 150px;
+  height: 165px;
   /* background-image: linear-gradient(#1A2225, #75af65); */
-  background: chartreuse;
+  background-color: #1A2225;
 }
 
 .about-column {
@@ -161,8 +162,22 @@ body {
   background-color: steelblue;
 }
 
+.footer-column {
+  padding: 5px 25px 125px 25px;
+  line-height: 1.3rem;
+}
+
+.copyright {
+  height: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 0.7rem;
+  background-color: #1A2225;
+}
+
 /* LARGER SCREENS 1190/1200 */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .project-row {
     height: 325px;
   }

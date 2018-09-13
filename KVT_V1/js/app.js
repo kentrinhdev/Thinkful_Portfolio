@@ -1,3 +1,5 @@
+
+
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -39,13 +41,22 @@ TxtType.prototype.tick = function() {
     }, delta);
 };
 
+const strSet = ["Hi.","Who","am", "I ?", 
+                "I am", "Crea-tive", "I am", "Dri-ven", "with", 
+                "both Design","and Code", "Fused", "into one.", 
+                "I am", 
+                "Ken Trinh" ];
+
 window.onload = function() {
     var elements = document.getElementsByClassName('typewrite');
     for (var i=0; i<elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
+        // console.log(toRotate);
+
         var period = elements[i].getAttribute('data-period');
         if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
+        //   new TxtType(elements[i], JSON.parse(toRotate), period);
+        new TxtType(elements[i], strSet, period);
         }
     }
     // INJECT CSS
