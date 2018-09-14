@@ -18,6 +18,7 @@ body {
   background: url(/img/bg.jpg);
   background-position: left bottom;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -38,18 +39,83 @@ body {
   display: block;
 }
 
+.intro-text-wrap h1 {
+  /* margin: 0 auto; */
+  letter-spacing: .15em; /* .15em */
+  /* white-space: nowrap; */
+  border-right: .10em solid #75af65;
+  overflow: hidden;
+  animation: 
+    /* typing 3.5s steps(40, end), */
+    blink-caret .75s step-end infinite;
+}
+/*
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+*/
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #75af65; }
+}
+
 .intro-text {
+  width: 95vw;
+  line-height: 120%;
   font-family: 'Orbitron', sans-serif;
-  font-size: 5rem;
+  font-size: 3rem; /* 4.5rem */
   /* color: #75af65; //blinking cursor color */
   text-align: right;
-  margin-top: 50px;
+  margin-top: 100px; /* 50px */
+  word-wrap: break-word;
+}
+
+.typewriter-row-01-02 {
+  width: 100vw;
+  height: 22vh;
+  margin-left: -25px;
+  margin-bottom: 50px;
+  background: url(/img/bg.jpg);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.typewriter-row-01-02 h1 {
+  /* padding-right: 50px; */
+
+
+}
+
+.typewriter-row-01-02 span {
+  /* width: 10px; */
+  /* margin-right: 15%; */
+  /*
+  letter-spacing: .15em;
+  border-right: .10em solid #75af65;
+  overflow: hidden;
+  animation:
+    blink-caret .75s step-end infinite;
+  */
+}
+
+
+
+
+.last-project-row {
+  margin-bottom: -100px;
 }
 
 /* MAIN SECTION */
 .header-container {
   text-align: center;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-bottom: 5px;
   /* border-bottom: 1px solid #75af65; */
 }
@@ -176,9 +242,29 @@ body {
   background-color: #1A2225;
 }
 
-/* LARGER SCREENS 1190/1200 */
-@media screen and (min-width: 1024px) {
+/* LARGER SCREENS 1024/1190/1200 */
+@media screen and (min-width: 769px) {
+  .intro-text {
+    font-size: 6rem;
+  }
+
+  .last-project-row {
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
   .project-row {
     height: 325px;
+  }
+
+  .last-project-row {
+    margin-bottom: -150px;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .last-project-row {
+    margin-bottom: -25px;
   }
 }

@@ -42,26 +42,26 @@ TxtType.prototype.tick = function() {
 };
 
 const strSet = ["Hi.","Who","am", "I ?", 
-                "I am", "Crea-tive", "I am", "Dri-ven", "with", 
+                "I am", "Creative", "I am", "Driven", "with", 
                 "both Design","and Code", "Fused", "into one.", 
                 "I am", 
-                "Ken Trinh" ];
+                "Ken Trinh"];
 
 window.onload = function() {
     var elements = document.getElementsByClassName('typewrite');
+
     for (var i=0; i<elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
-        // console.log(toRotate);
-
         var period = elements[i].getAttribute('data-period');
+
         if (toRotate) {
         //   new TxtType(elements[i], JSON.parse(toRotate), period);
         new TxtType(elements[i], strSet, period);
         }
     }
     // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #75af65}";
-    document.body.appendChild(css);
+    // var css = document.createElement("style");
+    // css.type = "text/css";
+    // css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #75af65}";
+    // document.body.appendChild(css);
 };
