@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog | KVT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="/css/blog.css" />
+  </head>
+
+  <body>
+    <form class="blog-form" id="blog-form" name="blog-form">
+      <fieldset>
+        <legend>What's on your mind?</legend>
+
+        <!-- <label class="blog" for="date-month"></label>
+        <input class="date-month" id="date-month" type="text" name="blog" />
+        <label for="date-day"></label>
+        <input class="date-day" id="date-day" type="text" name="blog" /> -->
+        <label for="date-time"></label>
+        <input class="date-time" id="date-time" type="text" name="blog" readonly />
+
+        <label for="blog-text"></label>
+        <textarea class="blog blog-text" id="blog-text" type="text" name="blog" autofocus="autofocus" placeholder="Thoughts go here . . ."></textarea>
+
+        <input class="blog btn-add-entry" id="btn-add-entry" type="submit" name="blog" value="POST" />
+      </fieldset>
+    </form>
+
+    <div class="blog blog-post" id="blog-post" name="blog-post"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/blog.js"></script>
+    <script src="/js/store.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
